@@ -90,11 +90,11 @@ function App() {
       socket.on('data', (data) => {
         console.log('data received:');
         console.log(data)
-        if (data?.audio) {
-          // playAudioFile(data.audio);
-        }
-        if (data?.text_translate) {
-          setTexts((prev) => [...prev, data.text_translate]);
+        // if (data?.audio) {
+        //   playAudioFile(data.audio);
+        // }
+        if (data?.text_stt) {
+          setTexts((prev) => [...prev, data.text_stt]);
         }
       });
     }
